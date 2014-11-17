@@ -19,6 +19,7 @@ import java.io.IOException;
  * Created by panacloud on 11/16/14.
  */
 
+@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class MainActivity extends Activity {
 
     private Camera mCamera;
@@ -35,6 +36,7 @@ public class MainActivity extends Activity {
         frameLayout = (FrameLayout) findViewById(R.id.frameLayout);
         mCaptureButton = (Button) findViewById(R.id.button1);
         mEffectButton = (Button) findViewById(R.id.button2);
+	getActionBar().hide();
 
 //        mCamera = getCameraInstance();
         //Opens the Camera, Camera.CameraInfo class provides a static constant for the front facing camera
